@@ -1,9 +1,10 @@
 package examples.w1;
 
 public class Rectangle {
-	int length;
-	int width;
+	public int length;
+	public int width;
 	
+	// Constructor
 	public Rectangle(int l, int w) {
 		length = l;
 		width = w;
