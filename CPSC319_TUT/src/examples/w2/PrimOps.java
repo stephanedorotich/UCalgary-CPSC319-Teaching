@@ -5,6 +5,7 @@ package examples.w2;
 
 import examples.w1.Rectangle;
 import java.lang.Math;
+import java.lang.reflect.Method;
 
 public class PrimOps {
 
@@ -78,6 +79,15 @@ public class PrimOps {
 				if (i == key) break;
 			}
 		}
+	}
+	
+	public static void main(String[] args) throws Exception {
+		// Creating a Method reference for a function
+		Class<?>[] parameterTypes = {Integer.class}; // need to know what parameters (args) the function requires
+		Method functionToPass = PrimOps.class.getMethod("func1", parameterTypes); // create a Method object for function
+		Object[] parameters = {1000}; // set the parameter we'd like to pass to the function.
+		
+		long time = Timer.time(parameterTypes, functionToPass, parameters);
 	}
 }
 
