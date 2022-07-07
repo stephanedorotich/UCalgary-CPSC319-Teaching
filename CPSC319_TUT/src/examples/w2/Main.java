@@ -20,26 +20,12 @@ public class Main {
 	
 	public static void main(String[] args) throws Exception {
 		// Testing func9
-		Class[] parameterTypes = new Class[2];
-		parameterTypes[0] = Integer.class;
-		parameterTypes[1] = Integer.class;
-		Object[] parameters = new Object[2];
-		Method functionToPass = PrimOps.class.getMethod("func9", parameterTypes);
-		parameters[0] = 5;
-		parameters[1] = -1;
-		long time_f9 = time(parameterTypes, functionToPass, parameters);
+		// Creating a Method reference for a function
 		
+		Class<?>[] parameterTypes = {Integer.class}; // need to know what parameters (args) the function requires
+		Method functionToPass = PrimOps.class.getMethod("func1", parameterTypes); // create a Method object for function
+		Object[] parameters = {1000}; // set the parameter we'd like to pass to the function.
 		
-		// Testing func5
-		Class[] f5_parameterTypes = new Class[1];
-		f5_parameterTypes[0] = Integer.class;
-		Object[] f5_parameters = new Object[1];
-		Method f5_func = PrimOps.class.getMethod("func5", f5_parameterTypes);
-		long time_f5 = 0;
-		for (int i = 1000; i < 1010; i++) {
-			f5_parameters[0] = i;
-			time_f5 += time(f5_parameterTypes, f5_func, f5_parameters);
-		}
-		System.out.println("Avg time: " + time_f5 / 10);
-	}	
+		long time = time(parameterTypes, functionToPass, parameters);
+	}
 }

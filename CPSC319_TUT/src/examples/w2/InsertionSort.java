@@ -38,7 +38,8 @@ public class InsertionSort {
 	}
 	
 	// InsertionSort algorithm
-	private static void sort(int[] nums) {
+	private static void insertionSort(int[] nums) {
+		// Write this function
 		nums[0] = 12;
 		return;
 	}
@@ -47,6 +48,6 @@ public class InsertionSort {
 		ListCreator lc = new ListCreator();
 		int[] nums = lc.rand_nums(10);
 		
-		sort(nums);
+		insertionSort(nums);
 	}
 }

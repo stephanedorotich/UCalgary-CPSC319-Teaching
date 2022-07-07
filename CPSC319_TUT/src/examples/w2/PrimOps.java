@@ -1,3 +1,6 @@
+// Author: Stéphane Dorotich
+// CPSC 319 - Summer 2022
+// Use freely
 package examples.w2;
 
 import examples.w1.Rectangle;
@@ -5,9 +8,10 @@ import java.lang.Math;
 
 public class PrimOps {
 
-	public static Long func1() {
+	public static Long func1(Integer n) {
 		Long x = 0L;
 		x = x - 3;
+		System.out.println("Hello");
 		return x;
 	}
 	
@@ -20,7 +24,7 @@ public class PrimOps {
 	public static void func3(Integer n) {
 		int i = 0;
 		while (i < n) {
-			System.out.print(i + " ");
+			String myString = "Hello\n";
 			i++;
 		}
 	}
@@ -52,18 +56,19 @@ public class PrimOps {
 	}
 	
 	public static void func7(Integer n) {
-		for (int x = n; x > 0; x/=2) {
+		for (int x = n; x > 0; x/=2) { //log(n)+1
 			System.out.print(x + " ");
 		}
 	}
 	
 	public static void func8(Integer n) {
-		for (int y = 0; y < n; y*=2) {
+		for (int y = 1; y < n; y*=2) {
 			System.out.print(y + " ");
 		}
 	}
 	
-	public static void func9(Integer n, Integer key) {
+	public static void func9(Integer n) {
+		Integer key = -1;
 		if (n > 18) {
 			System.out.println("Overflow");
 			return;
@@ -74,8 +79,17 @@ public class PrimOps {
 			}
 		}
 	}
-	
-	public static void main(String[] args) {
-		
-	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
