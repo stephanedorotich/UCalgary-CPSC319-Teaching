@@ -28,7 +28,7 @@ public class Mergesort {
 	}
 	 
 	public static void main(String[] args) {
-		int[] nums = ListCreator.rand_nums(10, 100);
+		int[] nums = ListCreator.rand_nums(10);
 		
 		System.out.println("Unsorted");
 		print(nums);
