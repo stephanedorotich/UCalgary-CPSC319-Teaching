@@ -10,6 +10,13 @@ public class ListCreator {
 		return myList;
 	}
 	
+	public static int[] rand_nums(int n, int max) {
+		Random rand = new Random();
+		int[] myList = new int[n];
+		for (int i = 0; i < n; i++) myList[i] = rand.nextInt(max);
+		return myList;
+	}
+	
 	public static int[] asc_nums(int n) {
 		int[] myList = new int[n];
 		for (int i = 0; i < n; i++) myList[i] = i;

@@ -16,15 +16,32 @@ public class InsertionSort {
 	// InsertionSort algorithm
 	private static void insertionSort(int[] nums) {
 		// Write this function
-		nums[0] = 12;
+		int i = 1;
+		int x, j;
+		while (i < nums.length) {
+			x = nums[i];
+			j = i - 1;
+			while (j >=0 && nums[j] > x) {
+				nums[j+1] = nums[j];
+				j--;
+			}
+			nums[j+1] = x;
+			i++;
+		}
 		return;
 	}
 	
 	public static void main(String[] args) {
-		int[] nums = ListCreator.rand_nums(10);
+		// time with 50,000
+		// switch rand_nums, dsc_nums
+		int[] nums = ListCreator.rand_nums(100000);
 		
+		long time = System.nanoTime();
 		insertionSort(nums);
+		time = System.nanoTime() - time;
 		
-		print(nums);
+		System.out.printf("%.4fs\n", (double) time / 1_000_000_000);
+		
+		print(nums, 12);
 	}
 }
