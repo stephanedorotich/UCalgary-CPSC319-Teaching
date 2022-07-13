@@ -10,7 +10,7 @@ public class Quicksort {
 		System.out.print('\n');
 	}
 	
-	private static void quicksort(int[] arr, int lo, int hi) {
+	public static void quicksort(int[] arr, int lo, int hi) {
 		return;
 	}
 	

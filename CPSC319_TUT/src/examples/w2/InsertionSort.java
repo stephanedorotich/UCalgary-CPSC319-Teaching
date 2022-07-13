@@ -14,7 +14,7 @@ public class InsertionSort {
 	}
 	
 	// InsertionSort algorithm
-	private static void insertionSort(int[] nums) {
+	public static void insertionSort(int[] nums) {
 		// Write this function
 		int i = 1;
 		int x, j;
