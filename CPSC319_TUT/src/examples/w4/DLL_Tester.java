@@ -79,7 +79,7 @@ public class DLL_Tester {
 			if (n.data != cmp) break;
 			cmp++;
 			if (n.next == null) temp = n;
-			n = n.next;			
+			n = n.next;
 		}
 		if (cmp != 9) {
 			System.out.printf("REMOVE:\t\tDid not properly remove node<%d> from the list.\n", val);
@@ -87,6 +87,7 @@ public class DLL_Tester {
 		}
 		
 		// Test 7 -- checking the prev pointers
+		cmp = 8;
 		while (temp != null) {
 			if (cmp == val) {
 				cmp--;
@@ -223,6 +224,15 @@ public class DLL_Tester {
 	
 	public static void main(String[] args) {
 		runTests();
+		
+//		DLL list = new DLL();
+//		list.insert(1);
+//		list.insert(2);
+//		
+//		list.display();
+//		
+//		list.remove(1);
+//		list.display();
 		
 //		DLL list = new DLL();
 //		...
